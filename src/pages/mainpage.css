@@ -1,0 +1,46 @@
+/* .rotate {
+  animation: rotation 1.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+} */
+
+.back_animation {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  animation: back_animation 0.2s infinite linear;
+}
+.back_animation1 {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  background-image: url("../images/back_grey01.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@keyframes back_animation {
+  0% {
+    background-image: url("../images/back_grey01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background-image: url("../images/back_grey02.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url("../images/back_grey01.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
