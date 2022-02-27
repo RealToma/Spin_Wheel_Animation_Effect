@@ -1,15 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Box, Modal } from "@material-ui/core";
 import styled from "styled-components";
-import Header from "../layouts/header";
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import './mainpage.css'
 import CasinoCircleImg01 from "../images/wheel01.png";
 import CasinoArrow01 from "../images/casino_needle01.png";
-import CasinoTitle01 from "../images/Assets/zoonimals.png";
 import Grass01 from "../images/Assets/BottomleafCoin.png";
-import GoldBox01 from "../images/Assets/Lionwithbox.png";
 import SPIButton01 from "../images/Assets/Button.png";
 import ConnectCancelImage01 from "../images/Connect Wallet Assets/Close icon.png";
 import SpinAwardImage01 from "../images/Popup Assets/main.png";
@@ -27,7 +24,6 @@ import Award_Cart01 from "../images/Popup Assets/Card_coin.png";
 
 const Mainpage = () => {
     const [spin_flag, set_spin] = useState(false);
-    const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const [open, setOpen] = useState(false);
     const handleOpen1 = () => setOpen1(true);
@@ -108,7 +104,7 @@ const Mainpage = () => {
 
     useEffect(() => {
         clearTimer(getDeadTime());
-    }, []);
+    });
 
     return (
         <StyledComponent>
@@ -364,33 +360,6 @@ const CasinoPart = styled(Box)`
     position: relative;
 
 `
-const CasinoTitle = styled(Box)`
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    top: 8%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    @media (max-width: 900px) {
-        width: 400px !important;
-    }
-    @media (max-width: 700px) {
-        top:15% !important;
-    }
-    @media (max-width: 500px) {
-        width: 300px !important;
-        top: 25% !important;
-    }
-    @media (max-width: 400px) {
-        width: 250px !important;
-    }
-
-    @media (max-height: 800px) {
-        width: 400px !important;
-    }
-`
 
 const CasinoArrow = styled(Box)`
     position: absolute;
@@ -433,34 +402,6 @@ const CasinoFootImg = styled(Box)`
     width: 100%;
     height: 300px;
     bottom: 0%;
-`
-
-const CasinoGoldBox = styled(Box)`
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 3%;
-    right: 3%;
-    width: 400px;
-    @media (max-width: 1200px) {
-        width: 300px !important;
-    }
-    @media (max-width: 900px) {
-        width: 250px !important;
-    }
-    @media (max-width: 900px) {
-        width: 200px !important;
-    }
-    @media (max-width: 700px) {
-        width: 180px !important;
-    }
-    @media (max-width: 500px) {
-        width: 150px !important;
-    }
-    &:hover{
-        cursor: pointer;
-    }
 `
 
 const SPINBtn = styled(Box)`
